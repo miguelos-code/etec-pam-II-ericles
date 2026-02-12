@@ -3,23 +3,31 @@ import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.texto}>Título</Text>
-      <TextInput placeholder="Caixa de texto" style={styles.input} />
-      <Button title="Salvar"/>
+      <Text style={styles.titulo}>Rede Social</Text>
+      <Text style={styles.postagem}>Postagem</Text>
+      <TextInput placeholder="Poste seu pensamento!" style={styles.input} />
+      <Button title="Postar"/>
+      <Button title="Deletar"/>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  texto: {
+  titulo: {
+    fontSize: 50,
+    marginBottom: '25%',
+    color: '#020414',
+  },
+  postagem: {
     fontSize: 30,
-    color: '#F54927',
+    marginBottom: '5%',
+    color: '#fff',
   },
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#000',
+    backgroundColor: '#939FF4',
   },
   input: {
     backgroundColor: '#696969',
@@ -29,6 +37,5 @@ const styles = StyleSheet.create({
     borderRadius: '4',
     borderColor: '#fff',
     height: '20%',
-    margin: '10%',
   },
 });
